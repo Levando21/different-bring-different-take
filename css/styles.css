@@ -1,0 +1,25 @@
+/** @format */
+::root {
+	font-family: "Vampiro One", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+
+	--main-red: #ed3b44;
+	--main-white: #fafafa;
+	--backround-black: #5b0844;
+	--cards-black: #242527;
+	--arrow-gray: #3b3b3b;
+
+	color: var(--main-white);
+	background-color: var(--backround-black);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+}
