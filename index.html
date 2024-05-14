@@ -20,6 +20,9 @@
 		<link
 			rel="stylesheet"
 			href="./css/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<title>Diff</title>
 	</head>
 	<body>
@@ -31,7 +34,70 @@
 					alt="yellow-girl" />
 			</a>
 			<h1>Paindonnavoller</h1>
-			<h2>Diffence is brought then from different taken</h2>
+			<h2>Diffence is brought by someone but Neptun is taken</h2>
+
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<a
+						href="https://open.spotify.com/album/0WpD65j8uDRfABdcyE0pZn"
+						target="_blank"
+						class="swiper-slide"
+						>Spotify</a
+					>
+
+					<a
+						href="https://soundcloud.com/user-809355084/sets/different-is-brought-by-someone-but-neptun-is-taken"
+						target="_blank"
+						class="swiper-slide"
+						>Soundcloud</a
+					>
+
+					<a
+						href="https://music.youtube.com/playlist?list=OLAK5uy_mfmhLPeB1Q2c9xqyXiPKydWXTsfLI0zUY"
+						target="_blank"
+						class="swiper-slide"
+						>YT Music</a
+					>
+				</div>
+
+				<div class="swiper-pagination"></div>
+
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+				<div class="swiper-scrollbar"></div>
+			</div>
 		</div>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper(".swiper", {
+				speed: 600,
+				parallax: true,
+				pagination: {
+					el: ".swiper-pagination",
+				},
+
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+
+				scrollbar: {
+					el: ".swiper-scrollbar",
+				},
+			});
+
+			const slides = document.querySelectorAll(".swiper-slide");
+
+			const gradients = [
+				"linear-gradient(to right, #090979, #ff9889, #ff99, #7202dd)",
+				"linear-gradient(to left, #99ff99, #9999ff)",
+				"linear-gradient(to bottom right, #9999ff, #ff9999)",
+			];
+
+			slides.forEach((slide, index) => {
+				slide.style.backgroundImage = gradients[index];
+			});
+		</script>
 	</body>
 </html>
