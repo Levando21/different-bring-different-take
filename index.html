@@ -27,14 +27,16 @@
 	</head>
 	<body>
 		<div class="content">
-			<a href="">
-				<img
-					class="image"
-					src="./img/girlyel.png"
-					alt="yellow-girl" />
-			</a>
-			<h1>Paindonnavoller</h1>
-			<h2>Diffence is brought by someone but Neptun is taken</h2>
+			<div class="main-part">
+				<a href="">
+					<img
+						class="image"
+						src="./img/girlyel.png"
+						alt="yellow-girl" />
+				</a>
+				<h1>Paindonnavoller</h1>
+				<h2>Diffence is brought by someone but Neptun is taken</h2>
+			</div>
 
 			<div class="swiper">
 				<div class="swiper-wrapper">
@@ -42,22 +44,53 @@
 						href="https://open.spotify.com/album/0WpD65j8uDRfABdcyE0pZn"
 						target="_blank"
 						class="swiper-slide"
-						>Spotify</a
-					>
+						>Spotify
+						<img
+							src="/Users/leozolotukhin/Desktop/GoIt/different-bring-different-take/img/13.png"
+							alt="Soundcloud"
+							width="70"
+							class="swiper-image"
+							height="70"
+					/></a>
 
 					<a
 						href="https://soundcloud.com/user-809355084/sets/different-is-brought-by-someone-but-neptun-is-taken"
 						target="_blank"
 						class="swiper-slide"
-						>Soundcloud</a
-					>
+						>Soundcloud
+						<img
+							src="/Users/leozolotukhin/Desktop/GoIt/different-bring-different-take/img/12.jpeg"
+							alt="Soundcloud"
+							width="70"
+							class="swiper-image"
+							height="70" />
+					</a>
 
 					<a
 						href="https://music.youtube.com/playlist?list=OLAK5uy_mfmhLPeB1Q2c9xqyXiPKydWXTsfLI0zUY"
 						target="_blank"
 						class="swiper-slide"
-						>YT Music</a
-					>
+						>YT Music
+						<img
+							src="/Users/leozolotukhin/Desktop/GoIt/different-bring-different-take/img/14.png"
+							alt="Soundcloud"
+							width="70"
+							class="swiper-image"
+							height="70"
+					/></a>
+
+					<a
+						href="https://music.apple.com/de/album/different-is-brought-by-someone-but-neptun-is-taken/1744812954"
+						target="_blank"
+						class="swiper-slide"
+						>Apple Music
+						<img
+							src="/Users/leozolotukhin/Desktop/GoIt/different-bring-different-take/img/17.jpeg"
+							alt="Soundcloud"
+							width="70"
+							class="swiper-image"
+							height="70"
+					/></a>
 				</div>
 
 				<div class="swiper-pagination"></div>
@@ -71,14 +104,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
 			const swiper = new Swiper(".swiper", {
-				speed: 800,
+				speed: 1500,
 				effect: "cards",
+				loop: true,
 				parallax: true,
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-					dynamicBullets: true,
-				},
 
 				navigation: {
 					nextEl: ".swiper-button-next",
@@ -94,9 +123,10 @@
 			const slides = document.querySelectorAll(".swiper-slide");
 
 			const gradients = [
-				"linear-gradient(to right, #090979, #ff9889, #ff99, #7202dd)",
+				"linear-gradient(to right, #a528b6, #ff9889, #ff99, #7202dd)",
 				"linear-gradient(to left, #5a1999, #a528b6, #00d4ff)",
 				"linear-gradient(to bottom right, #9999ff, #ff9999)",
+				"linear-gradient(to bottom left, #9999ff, #6d29c7)",
 			];
 
 			slides.forEach((slide, index) => {

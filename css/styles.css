@@ -20,8 +20,13 @@
 	-webkit-text-size-adjust: 100%;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	width: 100%;
+	height: 100%;
 	margin: 0;
 	background: linear-gradient(0.25turn, violet, 10%, blue);
 	background-size: 50% 100%;
@@ -31,10 +36,6 @@ body {
 .content {
 	max-width: 375px;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 
 .image {
@@ -43,6 +44,13 @@ body {
 	height: auto;
 	box-shadow: inset 0 6 12px #000;
 	opacity: 0.89;
+}
+
+.main-part {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 h1,
@@ -58,9 +66,11 @@ h2 {
 	height: 200px;
 	.swiper-slide {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
+		gap: 10px;
 		font-size: 24px;
 		text-shadow: 5px 5px #558abb;
 		list-style: none;
@@ -72,17 +82,17 @@ h2 {
 
 .swiper-slide:hover,
 .swiper-slide:focus {
-	text-shadow: 8px 0px #242527;
+	text-shadow: 5px 5px violet;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-	width: 20px;
-	height: 20px;
-	border: 4px solid var(--cards-black);
+.swiper-image {
 	border-radius: 50%;
+}
 
-	z-index: 0;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	color: #3e2b2b;
+	font-size: 10px;
 }
 
 .swiper-pagination {
@@ -90,9 +100,27 @@ h2 {
 	position: absolute;
 	bottom: 10px;
 	left: 50%;
+	width: 20px;
+	height: 20px;
+
 	transform: translateX(-50%);
 }
 
+.swiper-pagination-bullet-active {
+	width: 20px;
+	height: 20px;
+	line-height: 14px;
+	background-color: #558abb;
+}
+
+@media screen and (max-width: 320px) {
+	.content {
+		max-width: 320px;
+		margin: 0;
+		align-items: center;
+		width: 100%;
+	}
+}
 @keyframes bgAnimatedGradient {
 	0% {
 		background-position: 0 0;
