@@ -71,10 +71,13 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script>
 			const swiper = new Swiper(".swiper", {
-				speed: 600,
+				speed: 800,
+				effect: "cards",
 				parallax: true,
 				pagination: {
 					el: ".swiper-pagination",
+					clickable: true,
+					dynamicBullets: true,
 				},
 
 				navigation: {
@@ -84,6 +87,7 @@
 
 				scrollbar: {
 					el: ".swiper-scrollbar",
+					dragable: true,
 				},
 			});
 
@@ -91,7 +95,7 @@
 
 			const gradients = [
 				"linear-gradient(to right, #090979, #ff9889, #ff99, #7202dd)",
-				"linear-gradient(to left, #99ff99, #9999ff)",
+				"linear-gradient(to left, #5a1999, #a528b6, #00d4ff)",
 				"linear-gradient(to bottom right, #9999ff, #ff9999)",
 			];
 
