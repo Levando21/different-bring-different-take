@@ -14,6 +14,7 @@
 
 	color: var(--main-white);
 
+	--background: linear-gradient(0.25turn, violet, 10%, blue);
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
